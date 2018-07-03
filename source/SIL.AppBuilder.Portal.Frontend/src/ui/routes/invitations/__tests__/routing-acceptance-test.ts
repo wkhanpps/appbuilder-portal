@@ -5,7 +5,7 @@ import { expect } from 'chai';
 import { setupApplicationTest, setupRequestInterceptor, useFakeAuthentication } from 'tests/helpers/index';
 import app from 'tests/helpers/pages/app';
 
-describe('Acceptance | Invitations | routing', () => {
+describe('Acceptance | Invitations | routing', function() {
   setupApplicationTest();
   useFakeAuthentication();
   setupRequestInterceptor();

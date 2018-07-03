@@ -5,7 +5,7 @@ import { expect } from 'chai';
 import Application from '@ui/application';
 
 // usage: https://github.com/bigtestjs/react/blob/master/tests/setup-app-test.js
-describe('Acceptance | Application | renders', () => {
+describe('Acceptance | Application | renders', function() {
   let app;
 
   beforeEach(async () => {

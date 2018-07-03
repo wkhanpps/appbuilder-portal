@@ -4,7 +4,6 @@ import createHistory from 'history/createMemoryHistory';
 
 import { beforeEach, afterEach } from '@bigtest/mocha';
 import { setupAppForTesting, mount } from '@bigtest/react';
-import MirageServer, { Factory } from '@bigtest/mirage';
 import { Polly } from '@pollyjs/core';
 
 
@@ -18,14 +17,19 @@ export { useFakeAuthentication } from './auth';
 export function setupRequestInterceptor(config: any = {}) {
 
   beforeEach(function() {
-    this.polly = new Polly('name of interceptor');
+    this.polly = new Polly('name of interceptor', {
+      persister: 'local-storage'
+    });
     // expose server directly to test environment
     // for easier request stubbing
     this.server = this.polly.server;
 
-    this.polly.server.get('https://cdn.auth0.com/*path').intercept((req, res) => {
-      res.status(200);
-      res.json({});
+    this.polly.server.host('https://cdn.auth0.com', () => {
+      this.polly.server.any()
+        .on('request', (req, res) => {
+          res.status(200);
+          res.json({});
+        })
     });
   });
 

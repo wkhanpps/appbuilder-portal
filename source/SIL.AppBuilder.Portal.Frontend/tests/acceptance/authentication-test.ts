@@ -10,9 +10,8 @@ import { setToken, deleteToken, isLoggedIn } from '@lib/auth0';
 import app from 'tests/helpers/pages/app';
 
 // usage: https://github.com/bigtestjs/react/blob/master/tests/setup-app-test.js
-describe('Acceptance | Authentication', () => {
+describe('Acceptance | Authentication', function() {
   setupApplicationTest();
-  setupRequestInterceptor();
 
   describe('is authenticated', () => {
     beforeEach(async () => {
@@ -26,6 +25,8 @@ describe('Acceptance | Authentication', () => {
     });
 
     describe('logging out', () => {
+      setupRequestInterceptor();
+
       beforeEach(async () => {
         await app.clickNotificationsBell();
         await app.clickLogout();
@@ -71,8 +72,8 @@ describe('Acceptance | Authentication', () => {
   describe('is not authenticated', () => {
     beforeEach(() => {
       deleteToken();
-
     });
+
     describe('navigates to a route that requires authentication', () => {
       beforeEach(async () => {
         await visit('/invitations');

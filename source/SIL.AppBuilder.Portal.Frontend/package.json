@@ -15,7 +15,7 @@
     "karma:start": "yarn karma start ./tests/karma.conf.js --fail-on-empty-test-suite",
     "test:watch": "yarn karma:start",
     "test:watch:headless": "CI=true yarn karma:start",
-    "test:ci": "CI=true yarn karma:start --single-run",
+    "test:ci": "PARALLEL=true CI=true yarn karma:start --single-run",
     "lint": "yarn tslint 'src/**/*.{ts,tsx}' 'tests/**/*.{ts,tsx}'",
     "lint:fix": "yarn lint --fix",
     "tslint-check": "./node_modules/.bin/tslint-config-prettier-check ./tslint.json"
@@ -48,9 +48,8 @@
     "semantic-ui-react": "^0.80.2"
   },
   "devDependencies": {
-    "@bigtest/interactor": "^0.5.0",
-    "@bigtest/mirage": "^0.0.1",
-    "@bigtest/mocha": "^0.3.3",
+    "@bigtest/interactor": "^0.5.1",
+    "@bigtest/mocha": "^0.4.1",
     "@bigtest/react": "^0.1.1",
     "@pollyjs/core": "^0.5.0",
     "@types/auth0-js": "^8.11.2",

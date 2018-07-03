@@ -6,7 +6,7 @@ import { mountWithContext } from 'tests/helpers';
 
 import Layout from '../index';
 
-describe('Integration | Component | Layout', () => {
+describe('Integration | Component | Layout', function() {
 
   describe('mounting', () => {
 

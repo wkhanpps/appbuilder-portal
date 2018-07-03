@@ -9,34 +9,21 @@
     core-js "^2.5.7"
     regenerator-runtime "^0.11.1"
 
-"@bigtest/convergence@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@bigtest/convergence/-/convergence-0.5.0.tgz#1d84f05e8e88869358050dabc28cf883872c41ca"
-
 "@bigtest/convergence@^0.9.1":
   version "0.9.1"
   resolved "https://registry.yarnpkg.com/@bigtest/convergence/-/convergence-0.9.1.tgz#ddbe3e85e757b8fb82b80df95ed2e574c9d24429"
 
-"@bigtest/interactor@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@bigtest/interactor/-/interactor-0.5.0.tgz#48b56c0706504d5c5652e1456302718522363120"
+"@bigtest/interactor@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@bigtest/interactor/-/interactor-0.5.1.tgz#4813a723582c21107363e16f4fb9fb517e1001cd"
   dependencies:
     "@bigtest/convergence" "^0.9.1"
 
-"@bigtest/mirage@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@bigtest/mirage/-/mirage-0.0.1.tgz#c13462680ce1d91d5b1a73a2f90489b0d6039e83"
+"@bigtest/mocha@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@bigtest/mocha/-/mocha-0.4.1.tgz#3cf8fffc9202132feb15064e8ae7db311d743341"
   dependencies:
-    faker "^4.1.0"
-    inflected "^2.0.2"
-    lodash "^4.17.4"
-    pretender "^2.0.0"
-
-"@bigtest/mocha@^0.3.3":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@bigtest/mocha/-/mocha-0.3.3.tgz#1a2e4545424f6e200af1c1720d8631fc1f36fda1"
-  dependencies:
-    "@bigtest/convergence" "^0.5.0"
+    "@bigtest/convergence" "^0.9.1"
 
 "@bigtest/react@^0.1.1":
   version "0.1.2"
@@ -2563,14 +2550,6 @@ extsprintf@^1.2.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
 
-fake-xml-http-request@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/fake-xml-http-request/-/fake-xml-http-request-2.0.0.tgz#41a92f0ca539477700cb1dafd2df251d55dac8ff"
-
-faker@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/faker/-/faker-4.1.0.tgz#1e45bbbecc6774b3c195fad2835109c6d748cc3f"
-
 fast-deep-equal@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-1.1.0.tgz#c053477817c86b51daa853c81e059b733d023614"
@@ -3432,10 +3411,6 @@ indexes-of@^1.0.1:
 indexof@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/indexof/-/indexof-0.0.1.tgz#82dc336d232b9062179d05ab3293a66059fd435d"
-
-inflected@^2.0.2:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/inflected/-/inflected-2.0.4.tgz#323770961ccbe992a98ea930512e9a82d3d3ef77"
 
 inflection@~1.12.0:
   version "1.12.0"
@@ -5586,13 +5561,6 @@ prepend-http@^1.0.0:
 preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
-
-pretender@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/pretender/-/pretender-2.0.0.tgz#5adae189f1d5b25f86113f9225df25bed54f4072"
-  dependencies:
-    fake-xml-http-request "^2.0.0"
-    route-recognizer "^0.3.3"
 
 pretty-error@^2.0.2:
   version "2.1.1"

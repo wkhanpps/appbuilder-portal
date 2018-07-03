@@ -6,7 +6,7 @@ import { useFakeAuthentication, setupApplicationTest } from 'tests/helpers/index
 
 import page from '../form/__tests__/page';
 
-describe('Acceptance | Invitations | Create Organization', () => {
+describe('Acceptance | Invitations | Create Organization', function() {
   setupApplicationTest();
   useFakeAuthentication();
 

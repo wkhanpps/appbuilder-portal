@@ -8,7 +8,7 @@ import Header from '../display';
 
 import headerHelper from 'tests/helpers/components/header';
 
-describe('Integration | Component | Header', () => {
+describe('Integration | Component | Header', function() {
 
   describe('Dropdowns', () => {
     beforeEach(async () => {

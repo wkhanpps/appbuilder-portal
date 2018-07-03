@@ -4,12 +4,17 @@ var root = path.resolve(__dirname, '..');
 
 console.log('root path: ', root);
 
+var isParallel = process.env.PARALLEL === 'true';
+
+var conditionalPlugins = isParallel ? [ 'karma-parallel' ] : [];
+var conditionalFrameworks = isParallel ? [ 'parallel' ] : [];
+
 module.exports = function(config) {
   config.set({
     singleRun: false,
     retryLimit: 5, // hack around concurrency issues....
     basePath: '',
-    frameworks: [ 'parallel', 'mocha' ],
+    frameworks: [ ...conditionalFrameworks, 'mocha' ],
     reporters: [ 'mocha' ],
     browsers: ['Chrome'],
     mime: { 'text/x-typescript': ['ts','tsx'] },
@@ -36,6 +41,8 @@ module.exports = function(config) {
       mocha: {
         reporter: 'html',
         globals: false,
+        timeout: 5000,
+        fullTrace: true,
         opts: root + '/tests/mocha.opts'
       },
     },
@@ -43,11 +50,11 @@ module.exports = function(config) {
     webpack: require(__dirname + '/webpack.config.js'),
     webpackMiddleware: { stats: 'minimal' },
     plugins: [
-      'karma-parallel',
+      ...conditionalPlugins,
       'karma-mocha',
       'karma-webpack',
       'karma-mocha-reporter',
-      'karma-chrome-launcher'
+      'karma-chrome-launcher',
     ],
     parallelOptions: {
       // default to # CPUs - 1
